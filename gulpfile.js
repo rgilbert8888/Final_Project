@@ -25,7 +25,7 @@ gulp.task('serve', function(){  //watching for changes to files
 
 //replaces sass watch
 gulp.task('watch', ['sass', 'serve'], function(){
-	gulp.watch(['scss/*.scss'], ['sass']);
+	gulp.watch(['scss/**/*.scss'], ['sass']);
 })
 
 

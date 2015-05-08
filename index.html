@@ -15,34 +15,62 @@
     </head>
     <body>
     	<header>
+	<div class="nav-wrapper">
+		<div class="mobile-on hamburger-menu"><i class="fa fa-bars"></i></div>
 			<nav>
 				<ul>
-					<li><a href="#">Work</a></li>
-					<li><a href="#">Play</a></li>
-					<li><a href="#">Give</a></li>
-					<li><a href="#">Find Me!</a></li>
+					<li><a href="#contact" data-target=".page-contact">contact</a></li>
+					<li><a href="#products" data-target=".page-products">products</a></li>
+					<li><a href="#news" data-target=".page-news">news</a></li>
+					<li><a href="#about" data-target=".page-about">about</a></li>
 				</ul>
+				<a href="#home" class="js-page-home"><img src="images/epiclyric-dummy-logos.png"></a>
 			</nav>
-    	</header>
-    	<div class="home">
-    		<h1>Hi, my name is Robyn.<br>I like to build stuff.<br>But until then...</h1>  <!-- animate the h1 sections with css3!! -->
     	</div>
-    	<div class="work">
+    	</header>
+    	<section id="home">
+    		<h1>Hi, my name is Robyn.<br>I like to build stuff.<br>But until then...</h1>  <!-- animate the h1 sections with css3!! -->
+    	</section>
+    	<section id="work">
     		<img src="#" alt="photo of plants??">
     		<h2>...I can water your plants <i>and</i> edit your reports!</h2>
     		<p>this is some text about how id that and how i have a divers work history, which means i can plan your meetings, cater your lunches, tend to your in-office garden, </p>
 
 <!--     		maybe have a list of abilities here? -->
-    	</div>
-    	<div>
-    		
-    	</div>
-  		
+		</section>
+
+    	<section id="play">
+    		<h2>Play.</h2>
+
+    		<div class="col" id="first-col">
+    			<img src="#">
+	    		<p>column one web sample</p>
+	    	</div>
+
+	    	<div class="col" id="second-col">
+	    		<img src="#">
+	    		<p>column two web sample</p>
+	    	</div>
+
+	    	<div class="col" id="third-col">
+	    		<img src="#">
+	    		<p>column three web sample</p>
+    		</div>
+
+    	</section>
+
+    	<section id="give">
+    		<h2>Give.</h2>
+    		<p></p>
+    		<p></p>
+    	</section>
 
 
 
 
 
     	<script src="scripts/plugins.js"></script>
+    	<script src="scripts/main.js"></script>
+
     </body>
 </html>
