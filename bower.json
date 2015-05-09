@@ -18,5 +18,8 @@
   "devDependencies": {
     "jquery": "~2.1.4",
     "jquery.scrollTo": "~2.1.0"
+  },
+  "dependencies": {
+    "normalize.css": "~3.0.3"
   }
 }

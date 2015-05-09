@@ -1,33 +1,84 @@
-// .nav-wrapper {
-//   border-bottom: 4px solid black;
-//   padding: 10px;
-//   background-color: #fff;
-//   width: 100%;
+.nav-wrapper {
+  border-bottom: 1px solid black;
+  background-color: #eee;
+  width: 100%;
+  overflow: auto;
+
+  h1{
+  	display: inline;
+  	padding: 10px;
+  }
+}
+
+nav {
+	padding: 10px;
+	display: none;
+	float:right;
+  	clear: both;
+		
+
+			@include breakpoint(desktop) {
+				display: inline;
+				width: 100%;
+		}
+
+	ul {
+  		margin: 0 auto;
+  		padding: 0px;
+		
+		@include breakpoint(desktop) {
+			width: 100%;
+			  text-align: center;
+			}		
+
+			li {
+				display: block;
+				// float: left;
+		width: 16.66666666666667%;
+		text-align: center;
+		transition: border .5s;
+
+				@include breakpoint(desktop) {
+					display: inline;
+					  margin: 0 5%;
+
+				}
+
+// float: left;
+
+				a {
+					text-decoration: none;
+				}
+			}
+		}	
+	}
+
+
+.fa-arrow-circle-o-left{
+	transition: .5s ease-in-out;
+}
+
+.rotate{
+	transform: rotate(-90deg);
+}
+
+
+.mobile-on {
+	display: inline;
+	float: right;
+	@include breakpoint(desktop) {
+		display: none;
+	}
+
+}
+// @media all and (min-width: 560px){
+
+// .mobile-on{
+// 	display: none;
 // }
-
-// nav {
-// 	display: inline;
-// 	background-color: green;
-
-// 	ul {
-// 		display: inline;
-// 		float: right;
-
-// 			li {
-
-// 				display: inline;
-
-// 				a {
-// 					text-decoration: none;
-// 					font-size: 20px;
-// 					margin-right: 20px;
-// 					font-weight: bold;
-// 				}
-// 			}
-// 		}	
+// 	nav ul{
+// 		
+// 		padding: 0px;
 // 	}
 
-
-body{
-	color: orange;
-}
+// }
