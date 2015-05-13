@@ -1,5 +1,6 @@
 
 
+
  @mixin breakpoint($point) {
    @if $point == desktop {
      @media (min-width: 600px) { @content ; }
@@ -18,3 +19,24 @@
 
   // }
 }
+
+
+@mixin triangle($down-triangle-color){
+      content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        margin-left:-50px;
+        margin-top:-33px;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 33px solid $down-triangle-color;
+}
+
+
+
+@mixin rotate($deg) {
+    -ms-transform: rotate($deg); /* IE 9 */
+    -webkit-transform: rotate($deg); /* Chrome, Safari, Opera */
+    transform: rotate($deg);
+  }

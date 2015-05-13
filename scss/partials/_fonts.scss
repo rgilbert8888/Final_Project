@@ -1,8 +1,27 @@
-body{
-	font-family: "brandon-grotesque",sans-serif;
+
+
+$base-size: 50px;
+
+
+body {
+	font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 11px;
-	letter-spacing: 0.12em;
+	letter-spacing: 0.10em;
 	// text-transform: uppercase;
+
 }
+ 
+
+
+
+ @for $i from 1 through 6{
+	h#{$i}{
+		font-size: $base-size - ($i*9);
+		// color: lighten($font-dark,$i*10%); //color gradient
+		margin: 0px auto;
+		text-align: center;
+	}
+}
+

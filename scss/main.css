@@ -1711,14 +1711,16 @@
 .fa-medium:before {
   content: "\f23a"; }
 
+body {
+  color: black;
+  background-color: #FFFFFF; }
+
 .nav-wrapper {
-  border-bottom: 1px solid black;
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
-  overflow: auto; }
-  .nav-wrapper h1 {
-    display: inline;
-    padding: 10px; }
+  overflow: auto;
+  position: fixed;
+  z-index: 10; }
 
 nav {
   padding: 10px;
@@ -1738,15 +1740,14 @@ nav {
         text-align: center; } }
     nav ul li {
       display: block;
-      width: 16.66667%;
-      text-align: center;
-      transition: border .5s; }
+      width: 16.66667%; }
       @media (min-width: 600px) {
         nav ul li {
           display: inline;
           margin: 0 5%; } }
       nav ul li a {
-        text-decoration: none; }
+        text-decoration: none;
+        color: black; }
 
 .fa-arrow-circle-o-left {
   transition: .5s ease-in-out; }
@@ -1762,8 +1763,97 @@ nav {
       display: none; } }
 
 body {
-  font-family: "brandon-grotesque",sans-serif;
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 11px;
-  letter-spacing: 0.12em; }
+  letter-spacing: 0.1em; }
+
+h1 {
+  font-size: 41px;
+  margin: 0px auto;
+  text-align: center; }
+
+h2 {
+  font-size: 32px;
+  margin: 0px auto;
+  text-align: center; }
+
+h3 {
+  font-size: 23px;
+  margin: 0px auto;
+  text-align: center; }
+
+h4 {
+  font-size: 14px;
+  margin: 0px auto;
+  text-align: center; }
+
+h5 {
+  font-size: 5px;
+  margin: 0px auto;
+  text-align: center; }
+
+h6 {
+  font-size: -4px;
+  margin: 0px auto;
+  text-align: center; }
+
+#home {
+  text-align: center;
+  height: 100vh; }
+  #home h1 {
+    padding-top: 200px;
+    color: black; }
+
+#work {
+  height: 100vh; }
+  #work h2 {
+    padding: 100px 0px; }
+
+#col-wrapper {
+  width: 100%;
+  background-color: pink; }
+  #col-wrapper .col {
+    text-align: center;
+    position: relative; }
+    @media (min-width: 600px) {
+      #col-wrapper .col {
+        float: left;
+        width: 33.33%; } }
+    #col-wrapper .col .under {
+      width: 100%; }
+    #col-wrapper .col .draw {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+      transition: all 1.5s; }
+    #col-wrapper .col:hover .draw {
+      opacity: 1;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: black; }
+
+#contact {
+  clear: both;
+  height: 100vh;
+  text-align: center; }
+  #contact h2 {
+    padding: 100px 0px; }
+  #contact button {
+    padding: 20px;
+    background-color: black;
+    color: #FFFFFF;
+    border-radius: 20px;
+    border-style: none; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0 auto; }

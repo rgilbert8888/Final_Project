@@ -27,21 +27,29 @@ $(document).on('ready', function(){
 	});
 //make sure this only happens in small screen!!***//
 	$('.hamburger-menu').on('click', function(){
-			// $('nav ul').toggle();
 			$('.fa-arrow-circle-o-left').toggleClass('rotate');
 			if($('.fa-arrow-circle-o-left').hasClass('rotate')){
-				
-				// var list = $('ul');
-				// var listItems = list.children('li');
-				// list.append(listItems.get().reverse());
-				
 				$('nav').slideDown(400);
 			} else {
 				$('nav').slideUp(400);
 			}
 		});
-
+//make this go back to original unrotated state if user resizes screen and 
+//and then makes it small again
 
 });
 
+// $('section').height($(window).height()-$('.nav-wrapper').height());
 
+
+
+
+// 	var imageHeight = $('img').height();
+// 	var imageWidth = $('img').width();
+
+// 	$('.col p').height(imageHeight);
+// 	$('.col p').width(imageWidth);
+	
+// $('.col img').on('click', function(){
+// 	$('.col p').css("display", "block");
+// })
