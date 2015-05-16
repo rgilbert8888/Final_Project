@@ -1,0 +1,39 @@
+btn {
+	margin: 20px 0 0 0;
+	padding: 14px 24px 14px 24px;
+	margin-top: 5px;
+	margin-bottom: 5px;   
+	display: inline-block;
+	color:white;
+	border-radius:$border-radius;
+    border:none;
+	background-color: $font-dark;
+	overflow: visible;
+	position: relative;
+
+
+	// @include box-shadow();
+	// @include gradient(rgba(214,214,214,1), rgba(146,146,155,1));
+}
+
+
+.btn-send{
+	@extend btn;
+	margin-right: 5px;
+	
+	// @include gradient(#555555, #222222);
+}
+
+//no
+.btn-cancel{
+	@extend btn;
+	margin-left: 5px;
+	// @include gradient(rgba(255,48,25,1), rgba(147,19,2,1));
+}
+
+
+//yes
+// .btn-yes{
+// 	@extend button;
+// 	// @include gradient(rgba(75,198,102,1), rgba(0,87,0,1) );
+// }

@@ -12,11 +12,14 @@
 @import "font-awesome/stacked";
 @import "font-awesome/icons";
 
-@import 'partials/bits';
-@import 'partials/colors';
-@import 'partials/nav';
+
+@import 'partials/mixins';
 @import 'partials/fonts';
+@import 'partials/buttons';
+@import 'partials/nav';
 @import 'partials/sections';
+@import 'partials/modal';
+
 
 *{
 	box-sizing: border-box;

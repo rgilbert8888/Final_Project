@@ -1,9 +1,25 @@
 
+.fadeInDown{
+  -webkit-animation-name: fadeInDown;
+  -webkit-animation-duration: 3s;
+}
 
+@-webkit-keyframes fadeInDown{
+  0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0)
+        }
+  100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+        }
+    }
 
  @mixin breakpoint($point) {
    @if $point == desktop {
-     @media (min-width: 600px) { @content ; }
+     @media (min-width: 650px) { @content ; }
   }
   //  @else if $point == laptop {
   //    @media (min-width: 64em) { @content ; }
@@ -40,3 +56,8 @@
     -webkit-transform: rotate($deg); /* Chrome, Safari, Opera */
     transform: rotate($deg);
   }
+
+
+// @mixin box-shadow(){
+//   box-shadow: 2px 2px 1px 0px $shadow-color;
+// }

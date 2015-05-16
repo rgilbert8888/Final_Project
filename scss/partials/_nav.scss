@@ -1,12 +1,9 @@
 
 
 .nav-wrapper {
-  // border-bottom: 1px solid black;
   background-color: rgba(255,255,255, 0.8);
-
   width: 100%;
   overflow: auto;
-  // color: $font-light;
   position: fixed;
   z-index: 10;
 
@@ -55,6 +52,7 @@ nav {
 
 .fa-arrow-circle-o-left{
 	transition: .5s ease-in-out;
+	margin: 12px;
 }
 
 .rotate{
@@ -65,6 +63,7 @@ nav {
 .mobile-on {
 	display: inline;
 	float: right;
+
 	@include breakpoint(desktop) {
 		display: none;
 		}
@@ -72,7 +71,19 @@ nav {
 
 
 
+.fa-github-square {
 
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 12px;
+	font-size: x-large;
+	z-index: 100;
+
+	@include breakpoint(desktop) {
+		padding: .5%;
+	}
+}
 
 
 

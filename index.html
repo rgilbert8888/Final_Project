@@ -20,54 +20,73 @@
 		<div class="mobile-on hamburger-menu"><i class="fa fa-arrow-circle-o-left fa-3x"></i></div>
 			<nav>
 				<ul>
-                    <li><a href="#about" data-target=".page-about">about</a></li>
-                    <li><a href="#news" data-target=".page-news">news</a></li>
-                    <li><a href="#products" data-target=".page-products">products</a></li>
-					<li><a href="#contact" data-target=".page-contact">contact</a></li>
+                    <li><a href="#home" data-target="home">home</a></li>
+                    <li><a href="#work" data-target="work">work</a></li>
+                    <li><a href="#contact" data-target="contact">connect</a></li>
 				</ul>
 			</nav>
     	</div>
     	</header>
-
+        <i class="fa fa-github-square"></i>
     	<section id="home">
     		<h1>Hi, my name is Robyn.</h1>  <!-- animate the h1 sections with css3!! -->
             <div>
               <i class="fa fa-user fa-5x"></i>
         </div>
     	</section>
-
-<!--     	<section id="home2">
-
-    		<h2>I like to create websites.</h2>
-
-		</section> -->
-
-    	<section id="work">
-    		<h2>Here's what I can do</h2>
-            <div id="col-wrapper">
+    	<section id="work"> 
+    		<h2>Here's what I do</h2>
+            <div id="col-wrapper" class="wrapper-fixed-height">
         		<div class="col" id="first-col">
-        			<img class="under" src="http://placehold.it/250x250">
-    	    		<p class="draw">Thing one</p>
+        			<!-- <p>content</p> -->
+                    <img class="under" src="assets/images/mug.jpeg">
+    	    		<div class="draw">
+                        <a href="#">Link to my Github 1</a>
+                    </div>
     	    	</div>
 
     	    	<div class="col" id="second-col">
-    	    		<img class="under" src="http://placehold.it/250x250">
-    	    		<p class="draw">Thing two</p>
+    	    		<!-- <p>contentcontent contentcontent content contentcontent content</p> -->
+                    <img class="under" src="assets/images/plant.jpg">
+    	    		<div class="draw"><a href="#">Link to my Github 2</a></div>
     	    	</div>
 
     	    	<div class="col" id="third-col">
-    	    		<img class="under" src="http://placehold.it/250x250">
-                    <p class="draw">thing three</p>
+                    <!-- <p>contentcontent contentcontent content contentcontent content</p>
+                    <p>contentcontent contentcontent content contentcontent content</p> -->
+    	    		<img class="under" src="assets/images/table.jpg">
+                    <div class="draw"><a href="#">Link to my Github 3</a></div>
         		</div>
             </div>
     	</section>
 
     	<section id="contact">
     		<h2>I'd love to hear from you</h2>
-            <button>Contact Me!</button>
-    		<!-- some kind of email form thing here?? -->
-    	</section>
+            <button class="js-modal-activate">Contact Me!</button>   
+            <div class="modal-wrapper">
+                <div class="modal">
+                    <h3>Send A Message</h3>
+                    <form class="vertical-form">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input id='name' required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input id='email' type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <p id="count"></p>
 
+                        <button type="submit" class="btn-send">Send!</button>
+                        <button class="btn-cancel">Cancel</button>
+                    </form>    
+                </div>
+            </div>
+    	</section>
 
 
 

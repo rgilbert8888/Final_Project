@@ -1711,9 +1711,88 @@
 .fa-medium:before {
   content: "\f23a"; }
 
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  -webkit-animation-duration: 3s; }
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
 body {
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.1em;
   color: black;
   background-color: #FFFFFF; }
+
+h1 {
+  font-size: 41px;
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 50px; }
+
+h2 {
+  font-size: 32px;
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 50px; }
+
+h3 {
+  font-size: 23px;
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 50px; }
+
+h4 {
+  font-size: 14px;
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 50px; }
+
+h5 {
+  font-size: 5px;
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 50px; }
+
+h6 {
+  font-size: -4px;
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 50px; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+btn, .btn-send, .btn-cancel {
+  margin: 20px 0 0 0;
+  padding: 14px 24px 14px 24px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: white;
+  border-radius: 9px;
+  border: none;
+  background-color: black;
+  overflow: visible;
+  position: relative; }
+
+.btn-send {
+  margin-right: 5px; }
+
+.btn-cancel {
+  margin-left: 5px; }
 
 .nav-wrapper {
   background-color: rgba(255, 255, 255, 0.8);
@@ -1727,21 +1806,21 @@ nav {
   display: none;
   float: right;
   clear: both; }
-  @media (min-width: 600px) {
+  @media (min-width: 650px) {
     nav {
       display: inline;
       width: 100%; } }
   nav ul {
     margin: 0 auto;
     padding: 0px; }
-    @media (min-width: 600px) {
+    @media (min-width: 650px) {
       nav ul {
         width: 100%;
         text-align: center; } }
     nav ul li {
       display: block;
       width: 16.66667%; }
-      @media (min-width: 600px) {
+      @media (min-width: 650px) {
         nav ul li {
           display: inline;
           margin: 0 5%; } }
@@ -1750,7 +1829,8 @@ nav {
         color: black; }
 
 .fa-arrow-circle-o-left {
-  transition: .5s ease-in-out; }
+  transition: .5s ease-in-out;
+  margin: 12px; }
 
 .rotate {
   transform: rotate(-90deg); }
@@ -1758,46 +1838,20 @@ nav {
 .mobile-on {
   display: inline;
   float: right; }
-  @media (min-width: 600px) {
+  @media (min-width: 650px) {
     .mobile-on {
       display: none; } }
 
-body {
-  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 0.1em; }
-
-h1 {
-  font-size: 41px;
-  margin: 0px auto;
-  text-align: center; }
-
-h2 {
-  font-size: 32px;
-  margin: 0px auto;
-  text-align: center; }
-
-h3 {
-  font-size: 23px;
-  margin: 0px auto;
-  text-align: center; }
-
-h4 {
-  font-size: 14px;
-  margin: 0px auto;
-  text-align: center; }
-
-h5 {
-  font-size: 5px;
-  margin: 0px auto;
-  text-align: center; }
-
-h6 {
-  font-size: -4px;
-  margin: 0px auto;
-  text-align: center; }
+.fa-github-square {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 12px;
+  font-size: x-large;
+  z-index: 100; }
+  @media (min-width: 650px) {
+    .fa-github-square {
+      padding: .5%; } }
 
 #home {
   text-align: center;
@@ -1813,16 +1867,23 @@ h6 {
 
 #col-wrapper {
   width: 100%;
-  background-color: pink; }
+  height: auto; }
   #col-wrapper .col {
     text-align: center;
-    position: relative; }
-    @media (min-width: 600px) {
+    position: relative;
+    float: left;
+    width: 100%;
+    border: 10px solid white; }
+    @media (min-width: 650px) {
       #col-wrapper .col {
-        float: left;
         width: 33.33%; } }
-    #col-wrapper .col .under {
-      width: 100%; }
+    #col-wrapper .col img.under {
+      width: 100%;
+      border: 0;
+      height: 350px; }
+      @media (min-width: 650px) {
+        #col-wrapper .col img.under {
+          max-width: 350px; } }
     #col-wrapper .col .draw {
       position: absolute;
       top: 0;
@@ -1833,6 +1894,9 @@ h6 {
       padding: 0;
       opacity: 0;
       transition: all 1.5s; }
+      #col-wrapper .col .draw a {
+        color: black;
+        font-size: 37.5px; }
     #col-wrapper .col:hover .draw {
       opacity: 1;
       height: 100%;
@@ -1844,13 +1908,60 @@ h6 {
   height: 100vh;
   text-align: center; }
   #contact h2 {
-    padding: 100px 0px; }
-  #contact button {
+    padding: 100px 3px; }
+  #contact .js-modal-activate {
     padding: 20px;
     background-color: black;
     color: #FFFFFF;
-    border-radius: 20px;
-    border-style: none; }
+    border-radius: 9px;
+    border-style: none;
+    font-size: 22px; }
+  #contact #count {
+    height: auto; }
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(155, 155, 155, 0.6);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: none; }
+  .modal-wrapper .modal {
+    position: relative;
+    top: 20%;
+    margin: 0 auto;
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(1, 1, 1, 0.6);
+    color: white;
+    border-radius: 9px; }
+    .modal-wrapper .modal h3 {
+      padding-bottom: 10px; }
+    .modal-wrapper .modal .vertical-form {
+      text-align: center;
+      padding: 10px;
+      border-style: none; }
+      .modal-wrapper .modal .vertical-form .form-group label {
+        margin-bottom: 10px;
+        display: block; }
+      .modal-wrapper .modal .vertical-form .form-group #message {
+        height: 80px; }
+      .modal-wrapper .modal .vertical-form .form-group #name, .modal-wrapper .modal .vertical-form .form-group #email, .modal-wrapper .modal .vertical-form .form-group #message {
+        display: block;
+        border-style: none;
+        width: 230px;
+        padding: 5px;
+        margin-bottom: 15px;
+        color: black; }
+
+.modal-on {
+  overflow: hidden; }
 
 * {
   box-sizing: border-box; }
