@@ -41,15 +41,20 @@ $(document).on('ready', function(){
 		$('.fa-arrow-circle-o-left').toggleClass('rotate');
 			if($('.fa-arrow-circle-o-left').hasClass('rotate')){
 				$('nav').slideDown(400);
-			} else {
-				$('nav').slideUp(400);
+			} else{
+
+				$('nav').slideUp(200);
 			}
+
 		});
 //make this go back to original unrotated state if user resizes screen and 
 //and then makes it small again
-
+//also, make the mobile nav always hidden unless arrow has rotate class 
 
 //MODAL STUFF
+
+	//MESSAGE ME
+
 	$(".js-modal-activate").on("click", function(e){
 		// e.preventDefault();
 		$('.modal-wrapper').show();
@@ -60,6 +65,15 @@ $(document).on('ready', function(){
 		$('.modal-wrapper').hide();
 		$('body').removeClass("modal-on");
 	});
+
+	//NAVIGATE TO GITHUB?
+	$(".fa-github-square").on('click', function(e){
+		e.preventDefault;
+		$('.wrapper-navigate').show();
+		$('body').addClass("modal-on");
+	});
+
+	
 
 
 	// dont need this because html5 already has...

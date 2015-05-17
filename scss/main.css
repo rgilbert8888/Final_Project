@@ -1711,6 +1711,61 @@
 .fa-medium:before {
   content: "\f23a"; }
 
+body {
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: black;
+  background-color: #4f7aa0; }
+
+h1 {
+  font-size: 41px;
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 50px;
+  color: #FFFFFF; }
+
+h2 {
+  font-size: 32px;
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 50px;
+  color: #FFFFFF; }
+
+h3 {
+  font-size: 23px;
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 50px;
+  color: #FFFFFF; }
+
+h4 {
+  font-size: 14px;
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 50px;
+  color: #FFFFFF; }
+
+h5 {
+  font-size: 5px;
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 50px;
+  color: #FFFFFF; }
+
+h6 {
+  font-size: -4px;
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 50px;
+  color: #FFFFFF; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   -webkit-animation-duration: 3s; }
@@ -1725,55 +1780,6 @@
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
-
-body {
-  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: black;
-  background-color: #FFFFFF; }
-
-h1 {
-  font-size: 41px;
-  margin: 0px auto;
-  text-align: center;
-  padding-bottom: 50px; }
-
-h2 {
-  font-size: 32px;
-  margin: 0px auto;
-  text-align: center;
-  padding-bottom: 50px; }
-
-h3 {
-  font-size: 23px;
-  margin: 0px auto;
-  text-align: center;
-  padding-bottom: 50px; }
-
-h4 {
-  font-size: 14px;
-  margin: 0px auto;
-  text-align: center;
-  padding-bottom: 50px; }
-
-h5 {
-  font-size: 5px;
-  margin: 0px auto;
-  text-align: center;
-  padding-bottom: 50px; }
-
-h6 {
-  font-size: -4px;
-  margin: 0px auto;
-  text-align: center;
-  padding-bottom: 50px; }
-
-a {
-  color: white;
-  text-decoration: none; }
 
 btn, .btn-send, .btn-cancel {
   margin: 20px 0 0 0;
@@ -1854,14 +1860,21 @@ nav {
       padding: .5%; } }
 
 #home {
+  color: #FFFFFF;
   text-align: center;
   height: 100vh; }
   #home h1 {
-    padding-top: 200px;
-    color: black; }
+    padding-top: 200px; }
+  #home .fa-chevron-down {
+    position: absolute;
+    text-align: center;
+    top: 85%;
+    left: 0;
+    right: 0; }
 
 #work {
-  height: 100vh; }
+  height: 100vh;
+  background-color: #FFFFFF; }
   #work h2 {
     padding: 100px 0px; }
 
@@ -1873,14 +1886,17 @@ nav {
     position: relative;
     float: left;
     width: 100%;
-    border: 10px solid white; }
+    border: 10px solid white;
+    background-color: #FFFFFF; }
     @media (min-width: 650px) {
       #col-wrapper .col {
         width: 33.33%; } }
     #col-wrapper .col img.under {
       width: 100%;
       border: 0;
-      height: 350px; }
+      height: 350px;
+      filter: grayscale(1);
+      -webkit-filter: grayscale(1); }
       @media (min-width: 650px) {
         #col-wrapper .col img.under {
           max-width: 350px; } }
@@ -1897,11 +1913,11 @@ nav {
       #col-wrapper .col .draw a {
         color: black;
         font-size: 37.5px; }
-    #col-wrapper .col:hover .draw {
-      opacity: 1;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.8);
-      color: black; }
+      #col-wrapper .col .draw:hover .draw {
+        opacity: 1;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: black; }
 
 #contact {
   clear: both;
@@ -1918,6 +1934,30 @@ nav {
     font-size: 22px; }
   #contact #count {
     height: auto; }
+
+.wrapper-navigate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(155, 155, 155, 0.6);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: none;
+  z-index: 1; }
+  .wrapper-navigate .modal-navigate {
+    position: relative;
+    top: 20%;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(1, 1, 1, 0.6);
+    color: white;
+    border-radius: 9px; }
 
 .modal-wrapper {
   position: fixed;
@@ -1967,4 +2007,7 @@ nav {
   box-sizing: border-box; }
 
 body {
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: 'Lobster Two';
+  font-style: italic;
+  font-weight: 400; }

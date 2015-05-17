@@ -12,9 +12,8 @@
 @import "font-awesome/stacked";
 @import "font-awesome/icons";
 
-
-@import 'partials/mixins';
 @import 'partials/fonts';
+@import 'partials/mixins';
 @import 'partials/buttons';
 @import 'partials/nav';
 @import 'partials/sections';
@@ -28,6 +27,9 @@
 
 body{
 	margin: 0 auto;
+	font-family: 'Lobster Two';
+	font-style: italic;
+	font-weight: 400;
 	// padding: 5%;
 
 }

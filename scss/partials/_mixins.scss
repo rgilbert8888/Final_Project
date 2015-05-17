@@ -8,12 +8,12 @@
   0% {
         opacity: 0;
         -webkit-transform: translate3d(0, -100%, 0);
-        transform: translate3d(0, -100%, 0)
+        transform: translate3d(0, -100%, 0);
         }
   100% {
         opacity: 1;
         -webkit-transform: none;
-        transform: none
+        transform: none;
         }
     }
 
@@ -35,6 +35,49 @@
 
   // }
 }
+
+@mixin modal-wrapper {
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: rgba(155,155,155,.6);
+  width:100%;
+  height:100%;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+@mixin modal ($width, $height: $width) {   //height defaults to width if not specified
+    position:relative;
+    top:20%;
+    margin:0 auto;
+    width: $width;
+    height: $height;
+    border: 1px solid black;
+    padding:20px;
+    text-align:center;
+    background-color:rgba(1,1,1,.6);
+    color:white;
+    border-radius: $border-radius;
+}
+
+@mixin center ($top) {
+    position: absolute;
+    text-align: center;
+    top: $top;
+    left: 0;
+    right: 0;
+
+}
+
+
+
+
+
+
+
+
 
 
 @mixin triangle($down-triangle-color){
