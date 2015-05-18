@@ -5,14 +5,16 @@
 	@include modal-wrapper;
 	z-index: 1;
 	.modal-navigate{
-		@include modal(200px, 200px);
+		@include modal(350px, 250px);
+		h2{
+			padding-bottom: 10px;
+		}
+		p{
+			font-size: $font-small * 2;
+			font-weight: lighter;
+		}
 	}
 }
-
-
-
-
-
 
 
 

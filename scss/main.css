@@ -1712,9 +1712,6 @@
   content: "\f23a"; }
 
 body {
-  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.1em;
   color: black;
@@ -1781,7 +1778,7 @@ a {
     -webkit-transform: none;
     transform: none; } }
 
-btn, .btn-send, .btn-cancel {
+.btn, .btn-send, .btn-cancel, .btn-cancel-nav {
   margin: 20px 0 0 0;
   padding: 14px 24px 14px 24px;
   margin-top: 5px;
@@ -1797,7 +1794,7 @@ btn, .btn-send, .btn-cancel {
 .btn-send {
   margin-right: 5px; }
 
-.btn-cancel {
+.btn-cancel, .btn-cancel-nav {
   margin-left: 5px; }
 
 .nav-wrapper {
@@ -1876,7 +1873,8 @@ nav {
   height: 100vh;
   background-color: #FFFFFF; }
   #work h2 {
-    padding: 100px 0px; }
+    padding: 100px 0px;
+    color: black; }
 
 #col-wrapper {
   width: 100%;
@@ -1913,11 +1911,11 @@ nav {
       #col-wrapper .col .draw a {
         color: black;
         font-size: 37.5px; }
-      #col-wrapper .col .draw:hover .draw {
-        opacity: 1;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.8);
-        color: black; }
+    #col-wrapper .col:hover .draw {
+      opacity: 1;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: black; }
 
 #contact {
   clear: both;
@@ -1939,7 +1937,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(155, 155, 155, 0.6);
+  background-color: rgba(155, 155, 155, 0.7);
   width: 100%;
   height: 100%;
   padding: 0;
@@ -1950,20 +1948,25 @@ nav {
     position: relative;
     top: 20%;
     margin: 0 auto;
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 250px;
     border: 1px solid black;
     padding: 20px;
     text-align: center;
-    background-color: rgba(1, 1, 1, 0.6);
+    background-color: rgba(1, 1, 1, 0.65);
     color: white;
     border-radius: 9px; }
+    .wrapper-navigate .modal-navigate h2 {
+      padding-bottom: 10px; }
+    .wrapper-navigate .modal-navigate p {
+      font-size: 22px;
+      font-weight: lighter; }
 
 .modal-wrapper {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(155, 155, 155, 0.6);
+  background-color: rgba(155, 155, 155, 0.7);
   width: 100%;
   height: 100%;
   padding: 0;
@@ -1978,7 +1981,7 @@ nav {
     border: 1px solid black;
     padding: 20px;
     text-align: center;
-    background-color: rgba(1, 1, 1, 0.6);
+    background-color: rgba(1, 1, 1, 0.65);
     color: white;
     border-radius: 9px; }
     .modal-wrapper .modal h3 {
@@ -2010,4 +2013,4 @@ body {
   margin: 0 auto;
   font-family: 'Lobster Two';
   font-style: italic;
-  font-weight: 400; }
+  font-weight: lighter; }
