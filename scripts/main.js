@@ -16,8 +16,8 @@ $(document).on('ready', function(){
 			},
 			onAfter: function() {
 				var w = $(window).width();
-				if (w < 560) {
-					$('nav ul').toggleClass('mobile-on');
+				if (w < 600) {
+					$('nav').slideUp(200);
 					$('.fa-arrow-circle-o-left').toggleClass('rotate');
 				}
 			}
@@ -55,23 +55,25 @@ $(document).on('ready', function(){
 
 	//MESSAGE ME
 
-	$(".js-modal-activate").on("click", function(e){
-		// e.preventDefault();
-		$('.modal-wrapper').show();
+	$("button.js-modal-activate, i.fa-github-square").on("click", function(e){
+		e.preventDefault();
+		var wrapper = $(this).siblings().closest('.modal-wrapper');
+		wrapper.show();
 		$('body').addClass("modal-on");
 	});
 
 	$('.btn-cancel').on('click', function(){
-		$('.modal-wrapper').hide();
+		var wrapper = $(this).parents().closest('.modal-wrapper');
+		wrapper.hide();
 		$('body').removeClass("modal-on");
 	});
 
-	//NAVIGATE TO GITHUB?
-	$(".fa-github-square").on('click', function(e){
-		e.preventDefault;
-		$('.wrapper-navigate').show();
-		$('body').addClass("modal-on");
-	});
+	// //NAVIGATE TO GITHUB?
+	// $(".fa-github-square").on('click', function(e){
+	// 	e.preventDefault;
+	// 	$('.wrapper-navigate').show();
+	// 	$('body').addClass("modal-on");
+	// });
 
 	
 
