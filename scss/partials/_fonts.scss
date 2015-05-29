@@ -2,7 +2,7 @@
 $font-light: #FFFFFF;
 $font-dark: black;
 $base-size: 50px;
-$font-small: 11px;
+$font-small: 14px;
 $main-font: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $shadow-color: rgba(0,0,0,0.5);
 $border-radius: 9px;
@@ -35,4 +35,7 @@ body {
 a {
 	color:white;
 	text-decoration: none;
+}
+p{
+	font-size: $font-small *2;
 }

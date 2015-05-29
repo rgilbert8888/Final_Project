@@ -4,6 +4,22 @@
   -webkit-animation-duration: 3s;
 }
 
+// get the value of how far the element is from the top: 
+
+// on resize, reget position from the top
+
+// foo = $('.btn-large').position();
+// fooTop = foo.top;
+// console.log(fooTop);
+
+
+
+
+
+
+
+
+
 @-webkit-keyframes fadeInDown{
   0% {
         opacity: 0;
@@ -21,10 +37,12 @@
    @if $point == desktop {
      @media (min-width: 650px) { @content ; }
   }
-    @if $point == med-width {
+
+  @else if $point == med-width {
     @media (min-width: 475px) { @content ; }
     }
-  @if $point == desktop-wide {
+
+  @else if $point == desktop-wide {
      @media (min-width: 800px) { @content ; }
   }
   //   @else if $point == tablet {
@@ -49,6 +67,7 @@
   padding: 0;
   margin: 0;
   display: none;
+  z-index: 1;
 }
 
 @mixin modal ($width, $height: $width) {   //height defaults to width if not specified
@@ -60,12 +79,12 @@
     border: 1px solid black;
     padding:20px;
     text-align:center;
-    background-color:rgba(1,1,1,.65);
+    background-color:rgba(1,1,1,.75);
     color:white;
     border-radius: $border-radius;
 }
 
-@mixin center ($top) {
+@mixin center($top) {
     position: absolute;
     text-align: center;
     top: $top;
@@ -73,15 +92,6 @@
     right: 0;
 
 }
-
-
-
-
-
-
-
-
-
 
 @mixin triangle($down-triangle-color){
       content: '';
@@ -94,7 +104,6 @@
         border-right: 50px solid transparent;
         border-top: 33px solid $down-triangle-color;
 }
-
 
 
 @mixin rotate($deg) {

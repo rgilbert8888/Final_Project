@@ -1,4 +1,12 @@
+function getNavHeight(){
 
+	var navHeight = $('.nav-wrapper').height();
+	var w = $(window).width();
+	if (w < 650) {
+		return -(navHeight - 75);
+	}
+	return -navHeight;
+}
 
 $(document).on('ready', function(){
 
@@ -12,11 +20,11 @@ $(document).on('ready', function(){
 		//$(window).scrollTo(target, 5000);
 		$(window).scrollTo(target, 900,{
 			offset:{
-				top: -$('.nav-wrapper').height()
+				top: getNavHeight()
 			},
 			onAfter: function() {
 				var w = $(window).width();
-				if (w < 600) {
+				if (w < 650) {
 					$('nav').slideUp(200);
 					$('.fa-arrow-circle-o-left').toggleClass('rotate');
 				}
@@ -30,9 +38,9 @@ $(document).on('ready', function(){
 	$(window).on('resize', function(){
 		var w = $(window).width();
 		var nav = $('nav');
-		if(w > 600 && nav.is(':hidden')){
+		if(w > 650 && nav.is(':hidden')){
 			nav.show();
-		} else if(w < 600 && nav.is(':visible')){
+		} else if(w < 650 && nav.is(':visible')){
 			nav.hide();
 		}
 	});
@@ -53,7 +61,7 @@ $(document).on('ready', function(){
 
 //MODAL STUFF
 
-	//MESSAGE ME
+	//MESSAGE ME and NAV TO GITHUB?
 
 	$("button.js-modal-activate, i.fa-github-square").on("click", function(e){
 		e.preventDefault();
@@ -75,24 +83,7 @@ $(document).on('ready', function(){
 	// 	$('body').addClass("modal-on");
 	// });
 
-	
-
-
-	// dont need this because html5 already has...
-
-		// $('.btn-send').on('click', function(){
-		// 	var myReg =	 /^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/;
-		// 	var input = $('input').val();
-		// 	if(myReg.test(input) == true){
-		// 		alert('woow');
-		// 		return false;
-		// 	} else{
-		// 		alert('booo');
-		// 		return false;
-		// }
- 	//  })
-
-	//COUNTER
+	//CHARACTER COUNTER
 	$(function(){
 		$('#message').on('keyup', function(){
 			var maxCount = 300;
@@ -103,9 +94,43 @@ $(document).on('ready', function(){
 
 //SCROLL ANIMATIONS
 
-	$(window).on('scroll', function(){
-		$('h2').addClass('fadeInDown');
-	})
+	$(window).on('load', function(){
+		$('#home h2').addClass('fadeInDown');
+	});
+
+	// function getElemHeight(){
+
+	// }
+
+
+	
+		$(window).on('scroll', function(){
+		
+			if($('#work h2').height() > 40){
+				$('#work h2').addClass('fadeInDown');
+			}	
+		
+
+		 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 });
